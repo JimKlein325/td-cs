@@ -49,7 +49,7 @@ namespace ToDoList
       SqlDataReader rdr = null;
       conn.Open();
 
-      SqlCommand cmd = new SqlCommand("SELECT * FROM tasks;", conn);
+      SqlCommand cmd = new SqlCommand("SELECT * FROM tasks ORDER BY description DESC;", conn);
       rdr = cmd.ExecuteReader();
 
       while(rdr.Read())
